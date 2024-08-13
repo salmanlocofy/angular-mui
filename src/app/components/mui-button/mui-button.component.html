@@ -1,0 +1,66 @@
+<!-- Basic Button -->
+<section *ngIf="type === 'basic'">
+    <div [ngClass]="className" class="example-button-row">
+        <button mat-button [disabled]="disabled">{{ label || 'Basic' }}</button>
+    </div>
+</section>
+
+<!-- Raised Button -->
+<section *ngIf="type === 'raised'">
+    <div [ngClass]="className" class="example-button-row">
+        <button mat-raised-button [disabled]="disabled">{{ label || 'Raised' }}</button>
+    </div>
+</section>
+
+<!-- Stroked Button -->
+<section *ngIf="type === 'stroked'">
+    <div [ngClass]="className" class="example-button-row">
+        <button mat-stroked-button [disabled]="disabled">{{ label || 'Stroked' }}</button>
+    </div>
+</section>
+
+<!-- Flat Button -->
+<section *ngIf="type === 'flat'">
+    <div [ngClass]="className" class="example-button-row">
+        <button mat-flat-button [disabled]="disabled">{{ label || 'Flat' }}</button>
+    </div>
+</section>
+
+<!-- Icon Button -->
+<section *ngIf="type === 'icon'">
+    <div class="example-button-row">
+        <div [ngClass]="className" class="example-flex-container">
+            <button mat-icon-button [disabled]="disabled">
+                <mat-icon>{{ icon || 'more_vert' }}</mat-icon>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- FAB -->
+<section *ngIf="type === 'fab'">
+    <div class="example-button-row">
+        <div class="example-flex-container">
+            <div [ngClass]="className" class="example-button-container">
+                <button mat-fab [disabled]="disabled">
+                    <mat-icon>{{ icon || 'delete' }}</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Extended FAB -->
+<section *ngIf="type === 'extended'">
+    <div class="example-button-row">
+        <div class="example-flex-container">
+            <div class="example-button-container">
+                <button [ngClass]="className" mat-fab extended [disabled]="disabled">
+                    <mat-icon>{{ icon || 'favorite' }}</mat-icon>
+                    {{ label || 'Basic' }}
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>

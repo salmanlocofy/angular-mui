@@ -1,0 +1,6 @@
+<mat-form-field [class]="className" [class.example-full-width]="fullWidth">
+    <mat-label>{{ label }}</mat-label>
+    <textarea matInput [placeholder]="placeholder" [value]="value || ''" [rows]="rows" [cols]="cols"
+        (input)="onTextareaChange($event)">
+    </textarea>
+</mat-form-field>

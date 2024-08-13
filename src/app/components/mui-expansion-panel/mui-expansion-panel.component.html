@@ -1,0 +1,16 @@
+<mat-accordion [class]="className">
+    <mat-expansion-panel *ngFor="let section of sections; let i = index" [expanded]="section.expanded"
+        [disabled]="section.disabled" (opened)="toggleSection(i)" (closed)="toggleSection(i)">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{ section.heading }}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{section.secondaryHeading}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div *ngIf="section.expanded">
+            {{ section.content }}
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>

@@ -1,0 +1,9 @@
+<div [ngClass]="className" [ngStyle]="{'width.px': width}" *ngIf="type === 'bar'">
+    <mat-progress-bar [mode]="mode" [value]="value" [color]="color">
+    </mat-progress-bar>
+</div>
+
+<div [ngClass]="className" *ngIf="type === 'spinner'">
+    <mat-progress-spinner [mode]="mode" [value]="value" [color]="color" [diameter]="diameter">
+    </mat-progress-spinner>
+</div>

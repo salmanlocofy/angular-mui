@@ -1,0 +1,4 @@
+<mat-slider [disabled]="disabled" [max]="max" [min]="min" [step]="step" [discrete]="thumbLabel"
+    (valueChange)="onValueChange($event)">
+    <input matSliderThumb [(ngModel)]="value" #slider>
+</mat-slider>
