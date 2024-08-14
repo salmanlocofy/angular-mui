@@ -21,14 +21,11 @@ export class MuiButtonComponent {
     | 'fab'
     | 'extended' = 'basic';
   @Input() label: string = 'label';
-  @Input() icon: string = ''; // For icon buttons
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary'; // Button color
+  @Input() iconName: string = ''; // For icon buttons
+  @Input() iconPosition: 'none' | 'left' | 'right' = 'none';
   @Input() disabled: boolean = false; // Disable the button
-  @Input() href: string = ''; // URL for link buttons
   @Input() ariaLabel: string = ''; // ARIA label for accessibility
   @Input() extended: boolean = false; // Whether the button is extended (only for fab)
-  @Input() multiple: boolean = false; // Allow multiple sections to be expanded
-  @Input() iconPosition: 'before' | 'after' = 'before'; // Icon position
   @Input() className: string = '';
   // Output event emitter for button clicks
   @Output() click: EventEmitter<void> = new EventEmitter<void>();
