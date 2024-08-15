@@ -10,7 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 })
 export class MuiSelectComponent {
   // Input properties for select configuration
-  @Input() options: { value: any; label: string }[] = [
+  options: { value: any; label: string }[] = [
     { value: 'option1', label: 'Option 1' },
     { value: 'option2', label: 'Option 2' },
     { value: 'option3', label: 'Option 3' },
