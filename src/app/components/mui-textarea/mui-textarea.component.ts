@@ -12,6 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 export class MuiTextareaComponent {
   // Input properties for label, placeholder, value, and full-width option
   @Input() label: string = 'label';
+  @Input() appearance: 'outline' | 'fill' = 'fill';
   @Input() placeholder: string = 'placeholder';
   @Input() value: string | null = null;
   @Input() fullWidth: boolean = true;

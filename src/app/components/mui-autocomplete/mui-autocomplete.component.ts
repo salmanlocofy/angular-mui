@@ -29,11 +29,12 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 })
 export class MuiAutocompleteComponent {
   // Input properties
-  @Input() options: { value: any; label: string }[] = [
+  options: { value: any; label: string }[] = [
     { value: 'option1', label: 'Option 1' },
     { value: 'option2', label: 'Option 2' },
     { value: 'option3', label: 'Option 3' },
   ];
+  @Input() appearance: 'outline' | 'fill' = 'fill';
   @Input() placeholder: string = 'Select an option';
   @Input() disabled: boolean = false;
   @Input() value: any; // The currently selected value

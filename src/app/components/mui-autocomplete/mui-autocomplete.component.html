@@ -1,4 +1,4 @@
-<mat-form-field>
+<mat-form-field [appearance]="appearance">
     <mat-label>{{ placeholder }}</mat-label>
     <input matInput [formControl]="control" [matAutocomplete]="auto" [disabled]="disabled" #input />
     <mat-autocomplete #auto (optionSelected)="onOptionSelected($event)">

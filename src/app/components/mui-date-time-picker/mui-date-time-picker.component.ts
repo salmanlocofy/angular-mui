@@ -24,6 +24,7 @@ export class MuiDateTimePickerComponent {
   @Input() placeholder: string = 'Select a date'; // Placeholder text
   @Input() value: Date | null = null; // Selected date value
   @Input() disabled: boolean = false; // Disable the picker
+  @Input() appearance: 'outline' | 'fill' = 'fill';
 
   @Output() valueChange = new EventEmitter<Date | null>(); // EventEmitter for date changes
 

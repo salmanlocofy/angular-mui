@@ -1,4 +1,4 @@
-<mat-form-field appearance="fill">
+<mat-form-field [appearance]="appearance">
     <mat-label>{{ placeholder }}</mat-label>
     <input matInput [matDatepicker]="picker" [value]="value" (dateChange)="onDateChange($event)"
         [disabled]="disabled" />

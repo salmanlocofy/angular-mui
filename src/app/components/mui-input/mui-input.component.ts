@@ -1,6 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import {
+  MAT_FORM_FIELD_DEFAULT_OPTIONS,
+  MatFormFieldModule,
+} from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 
@@ -18,6 +21,7 @@ export class MuiInputComponent {
   @Input() value: string = '';
   @Input() fullWidth: boolean = true;
   @Input() className: string = '';
+  @Input() appearance: 'outline' | 'fill' = 'fill';
   @Input() leftIcon: string | null = null; // Left icon name
   @Input() rightIcon: string | null = null; // Right icon
   @Input() hintText: string = '';

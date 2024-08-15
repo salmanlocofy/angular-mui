@@ -25,7 +25,6 @@ export class MuiButtonComponent {
   @Input() iconPosition: 'none' | 'left' | 'right' = 'none';
   @Input() disabled: boolean = false; // Disable the button
   @Input() ariaLabel: string = ''; // ARIA label for accessibility
-  @Input() extended: boolean = false; // Whether the button is extended (only for fab)
   @Input() className: string = '';
   // Output event emitter for button clicks
   @Output() click: EventEmitter<void> = new EventEmitter<void>();

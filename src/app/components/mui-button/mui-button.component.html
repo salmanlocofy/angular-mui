@@ -17,7 +17,7 @@
             mat-raised-button [disabled]="disabled">
             <mat-icon
                 [ngStyle]="iconPosition === 'right' ? {'margin': '0px -8px 0px 8px'} : {'margin': '0px 8px 0px -8px'}"
-                *ngIf="iconPosition!=='none'">{{ iconName || 'favorite' }}</mat-icon>
+                *ngIf="iconPosition !=='none'">{{ iconName || 'favorite' }}</mat-icon>
             {{ label || 'Raised' }}</button>
     </div>
 </section>
