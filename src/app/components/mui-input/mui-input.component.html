@@ -1,7 +1,8 @@
 <mat-form-field [ngClass]="className" [appearance]="appearance" [class.example-full-width]="fullWidth">
     <mat-label>{{ label }}</mat-label>
     <mat-icon matPrefix *ngIf="leftIcon">{{ leftIcon }}</mat-icon>
-    <input matInput [placeholder]="placeholder" [value]="value || ''" (input)="onInputChange($event)">
+    <input [disabled]="disabled" matInput [placeholder]="placeholder" [value]="value || ''"
+        (input)="onInputChange($event)">
     <mat-icon matSuffix *ngIf="rightIcon">{{ rightIcon }}</mat-icon>
     <mat-hint>{{hintText}}</mat-hint>
 </mat-form-field>

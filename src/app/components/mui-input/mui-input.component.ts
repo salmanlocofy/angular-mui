@@ -19,6 +19,7 @@ export class MuiInputComponent {
   @Input() label: string = 'label';
   @Input() placeholder: string = 'placeholder';
   @Input() value: string = '';
+  @Input() disabled: boolean = false;
   @Input() className: string = '';
   @Input() appearance: 'outline' | 'fill' = 'fill';
   @Input() leftIcon: string | null = null; // Left icon name
