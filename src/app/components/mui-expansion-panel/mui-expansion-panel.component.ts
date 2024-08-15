@@ -15,7 +15,6 @@ export class MuiExpansionPanelComponent {
   @Input() content: string = '';
   @Input() expanded: boolean = false;
   @Input() disabled: boolean = false;
-  @Input() multiple: boolean = false; // Allow multiple sections to be expanded
   @Input() className: string = '';
   // Output event emitter to notify parent of section toggle events
   @Output() sectionToggle = new EventEmitter<{
