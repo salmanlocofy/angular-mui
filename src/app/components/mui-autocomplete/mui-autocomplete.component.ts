@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'mui-autocomplete',
@@ -25,6 +26,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MatInputModule,
     MatAutocompleteModule,
     ReactiveFormsModule,
+    MatIconModule
   ],
 })
 export class MuiAutocompleteComponent {
@@ -37,6 +39,8 @@ export class MuiAutocompleteComponent {
   @Input() appearance: 'outline' | 'fill' = 'fill';
   @Input() placeholder: string = 'Select an option';
   @Input() disabled: boolean = false;
+  @Input() leftIcon: string | null = null; // Left icon name
+  @Input() rightIcon: string | null = null; // Right icon
   @Input() value: any; // The currently selected value
   @Input() displayFn: (option: any) => string = (option) => option?.label || ''; // Function to display the option in the input
   @Input() filterFn: (
