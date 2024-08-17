@@ -1,5 +1,6 @@
 <mat-form-field [appearance]="appearance" [ngStyle]="fullWidth ? {'width': '100%'} : {'width': 'auto'}">
     <mat-label>{{ placeholder }}</mat-label>
+    <mat-icon matPrefix *ngIf="leftIcon">{{ leftIcon }}</mat-icon>
     <mat-select [class]="className" [value]="value" [disabled]="disabled" (selectionChange)="onSelectionChange($event)">
         <mat-option *ngFor="let option of options" [value]="option.value">
             {{ option.label }}

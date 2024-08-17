@@ -1,10 +1,11 @@
 <mat-form-field [appearance]="appearance" [ngStyle]="fullWidth ? {'width': '100%'} : {'width': 'auto'}">
     <mat-label>{{ placeholder }}</mat-label>
-    <input matInput [formControl]="control" [matAutocomplete]="auto" [disabled]="disabled" #input />
     <mat-icon matPrefix *ngIf="leftIcon">{{ leftIcon }}</mat-icon>
-    <mat-autocomplete #auto (optionSelected)="onOptionSelected($event)">
+    <input matInput [formControl]="control" [matAutocomplete]="auto" [disabled]="disabled" #input style="flex-direction: row-reverse;"/>
+    <mat-autocomplete #auto (optionSelected)="onOptionSelected($event)" style="flex-direction: row-reverse; display: flex;">
         <mat-option *ngFor="let option of filteredOptions$ | async" [value]="option">
             {{ option.label }}
         </mat-option>
     </mat-autocomplete>
+    <mat-icon matSuffix>arrow_drop_down</mat-icon>
 </mat-form-field>
