@@ -11,16 +11,15 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   imports: [CommonModule, MatProgressBarModule, MatProgressSpinnerModule],
 })
 export class MuiProgressComponent {
-  // Input properties for controlling the progress display
-  @Input() type: 'bar' | 'spinner' = 'bar'; // Type of progress indicator
-  @Input() mode: 'determinate' | 'indeterminate' = 'indeterminate'; // Progress mode
-  @Input() value: number = 50; // Value for determinate progress bar
-  @Input() width: string = '200'; // Value for determinate progress bar
+  @Input() type: 'bar' | 'spinner' = 'bar';
+  @Input() mode: 'determinate' | 'indeterminate' = 'indeterminate';
+  @Input() value: number = 50;
+  @Input() width: string = '200';
   @Input() className: string = '';
-  @Input() color: 'primary' | 'accent' | 'warn' = 'primary'; // Color of the progress indicator
-  @Input() diameter: number = 50; // Diameter of the progress spinner
+  @Input() color: 'primary' | 'accent' | 'warn' = 'primary';
+  @Input() diameter: number = 50;
 
-  @Output() valueChange = new EventEmitter<number>(); // EventEmitter for value changes
+  @Output() valueChange = new EventEmitter<number>();
 
   ngOnChanges() {
     if (this.mode === 'determinate') {

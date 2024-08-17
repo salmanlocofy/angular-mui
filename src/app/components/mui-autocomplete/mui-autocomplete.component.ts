@@ -30,7 +30,6 @@ import { MatIconModule } from '@angular/material/icon';
   ],
 })
 export class MuiAutocompleteComponent {
-  // Input properties
   options: { value: any; label: string }[] = [
     { value: 'option1', label: 'Option 1' },
     { value: 'option2', label: 'Option 2' },
@@ -39,10 +38,10 @@ export class MuiAutocompleteComponent {
   @Input() appearance: 'outline' | 'fill' = 'fill';
   @Input() placeholder: string = 'Select an option';
   @Input() disabled: boolean = false;
-  @Input() leftIcon: string | null = null; // Left icon name
-  @Input() rightIcon: string | null = null; // Right icon
-  @Input() value: any; // The currently selected value
-  @Input() displayFn: (option: any) => string = (option) => option?.label || ''; // Function to display the option in the input
+  @Input() leftIcon: string | null = null;
+  @Input() value: any;
+  @Input() fullWidth: boolean = false;
+  @Input() displayFn: (option: any) => string = (option) => option?.label || '';
   @Input() filterFn: (
     options: { value: any; label: string }[],
     filterValue: string
@@ -51,7 +50,6 @@ export class MuiAutocompleteComponent {
       option.label.toLowerCase().includes(filterValue?.toLowerCase())
     );
 
-  // Output event emitter for value changes
   @Output() valueChange = new EventEmitter<any>();
 
   filteredOptions$: Observable<{ value: any; label: string }[]> | undefined;

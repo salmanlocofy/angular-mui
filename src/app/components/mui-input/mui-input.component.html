@@ -1,4 +1,4 @@
-<mat-form-field [ngClass]="className" [appearance]="appearance" [class.example-full-width]="fullWidth">
+<mat-form-field [ngClass]="className" [appearance]="appearance" [ngStyle]="fullWidth ? {'width': '100%'} : {'width': 'auto'}">
     <mat-label>{{ label }}</mat-label>
     <mat-icon matPrefix *ngIf="leftIcon">{{ leftIcon }}</mat-icon>
     <input matInput [placeholder]="placeholder" [value]="value || ''" (input)="onInputChange($event)">

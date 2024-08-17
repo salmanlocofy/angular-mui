@@ -1,4 +1,4 @@
-<mat-slider [disabled]="disabled" [max]="max" [min]="min" [step]="step" [discrete]="thumbLabel"
+<mat-slider [disabled]="disabled" [max]="max" [min]="min" [step]="step" [discrete]="thumbLabel" style="width: 100%;"
     (valueChange)="onValueChange($event)">
     <input matSliderThumb [(ngModel)]="value" #slider>
 </mat-slider>

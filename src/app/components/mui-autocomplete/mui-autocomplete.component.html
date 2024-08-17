@@ -1,4 +1,4 @@
-<mat-form-field [appearance]="appearance">
+<mat-form-field [appearance]="appearance" [ngStyle]="fullWidth ? {'width': '100%'} : {'width': 'auto'}">
     <mat-label>{{ placeholder }}</mat-label>
     <input matInput [formControl]="control" [matAutocomplete]="auto" [disabled]="disabled" #input />
     <mat-icon matPrefix *ngIf="leftIcon">{{ leftIcon }}</mat-icon>
@@ -7,5 +7,4 @@
             {{ option.label }}
         </mat-option>
     </mat-autocomplete>
-    <mat-icon matSuffix *ngIf="rightIcon">{{ rightIcon }}</mat-icon>
 </mat-form-field>

@@ -11,7 +11,6 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrls: ['./mui-button.component.css'],
 })
 export class MuiButtonComponent {
-  // Input properties for button configuration
   @Input() type:
     | 'basic'
     | 'raised'
@@ -21,17 +20,17 @@ export class MuiButtonComponent {
     | 'fab'
     | 'extended' = 'basic';
   @Input() label: string = 'label';
-  @Input() iconName: string = ''; // For icon buttons
+  @Input() iconName: string = '';
   @Input() iconPosition: 'none' | 'left' | 'right' = 'none';
-  @Input() disabled: boolean = false; // Disable the button
-  @Input() ariaLabel: string = ''; // ARIA label for accessibility
+  @Input() disabled: boolean = false;
+  @Input() ariaLabel: string = '';
   @Input() className: string = '';
-  // Output event emitter for button clicks
+  @Input() fullWidth: boolean = false;
+
   @Output() click: EventEmitter<void> = new EventEmitter<void>();
 
-  // Method to handle button clicks
   onClick(event: Event): void {
-    event.preventDefault(); // Prevent default behavior if necessary (e.g., for links)
+    event.preventDefault();
     this.click.emit();
   }
 }

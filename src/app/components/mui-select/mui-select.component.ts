@@ -9,7 +9,6 @@ import { MatSelectModule } from '@angular/material/select';
   styleUrls: ['./mui-select.component.css'],
 })
 export class MuiSelectComponent {
-  // Input properties for select configuration
   options: { value: any; label: string }[] = [
     { value: 'option1', label: 'Option 1' },
     { value: 'option2', label: 'Option 2' },
@@ -18,12 +17,12 @@ export class MuiSelectComponent {
   @Input() placeholder: string = 'Select an option';
   @Input() className: string = '';
   @Input() disabled: boolean = false;
-  @Input() value: any; // The currently selected value
+  @Input() value: any;
+  @Input() fullWidth: boolean = false;
+  @Input() appearance: 'outline' | 'fill' = 'fill';
 
-  // Output event emitter to notify parent of select changes
   @Output() valueChange = new EventEmitter<any>();
 
-  // Method to handle select value changes
   onSelectionChange(event: any): void {
     this.value = event.value;
     this.valueChange.emit(this.value);

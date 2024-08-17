@@ -1,5 +1,6 @@
-<mat-form-field [appearance]="appearance">
+<mat-form-field [appearance]="appearance" [ngStyle]="fullWidth ? {'width': '100%'} : {'width': 'auto'}">
     <mat-label>{{ placeholder }}</mat-label>
+    <mat-icon matPrefix *ngIf="leftIcon">{{ leftIcon }}</mat-icon>
     <input matInput [matDatepicker]="picker" [value]="value" (dateChange)="onDateChange($event)"
         [disabled]="disabled" />
     <mat-datepicker-toggle matSuffix [for]="picker" *ngIf="!disabled">

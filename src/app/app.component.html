@@ -176,10 +176,29 @@
 </style>
 
 <main class="main">
-  <div class="content">
-    <mui-input appearance="outline" leftIcon="arrow_drop_down" rightIcon="alarm"></mui-input>
-    <mui-textarea label="sid" value="jane" placeholder="placeholder"> </mui-textarea>
-    <mui-autocomplete appearance="outline" leftIcon="arrow_drop_down" rightIcon="alarm"></mui-autocomplete>
+  <div style="width: 600px; flex-direction: column; display: flex; gap: 50px;">
+    Autocomplete
+    <mui-autocomplete appearance="outline" leftIcon="arrow_drop_down" rightIcon="alarm" [fullWidth]="true"></mui-autocomplete>
+    Button
+    <mui-button [fullWidth]="true" type="flat" iconPosition="right" iconName="home"/>
+    Checkbox
+    <mui-checkbox />
+    Date Time Picker
+    <mui-date-time-picker [fullWidth]="true" appearance="outline"></mui-date-time-picker>
+    Accordion
+    <mui-expansion-panel />
+    Input
+    <mui-input [fullWidth]="true" appearance="outline"/>
+    Progress Bar
+    <mui-progress type="spinner"/>
+    Select
+    <mui-select [fullWidth]="true" appearance="outline"/>
+    Slider
+    <mui-slider />
+    Switch
+    <mui-switch />
+    Text Area
+    <mui-textarea [fullWidth]="true" appearance="outline"/>
   </div>
 </main>
 

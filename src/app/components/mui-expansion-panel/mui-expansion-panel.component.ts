@@ -16,12 +16,11 @@ export class MuiExpansionPanelComponent {
   @Input() expanded: boolean = false;
   @Input() disabled: boolean = false;
   @Input() className: string = '';
-  // Output event emitter to notify parent of section toggle events
+
   @Output() sectionToggle = new EventEmitter<{
     expanded: boolean;
   }>();
 
-  // Method to handle section expansion and collapse
   toggleSection(): void {
     this.expanded = !this.expanded;
     this.sectionToggle.emit({ expanded: this.expanded });
