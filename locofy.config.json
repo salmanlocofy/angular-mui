@@ -1,8 +1,6 @@
 {
-  "components": [
-    "./src/app/components/mui-button/mui-button.component.ts",
-    "./src/app/components/mui-input/mui-input.component.ts"
-  ],
-  "projectId": "66bafb128a3774a429eae195",
-  "projectName": "Acc"
+  "components": ["./src/app/components/mui-button/mui-button.component.ts"],
+  "wrapper": "./src/app/app-wrapper/app-wrapper.component.ts",
+  "projectId": "66bf68f490efaf86dc002ecc",
+  "projectName": "mui-button-test"
 }

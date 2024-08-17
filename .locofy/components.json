@@ -3,7 +3,7 @@
     "name": "MuiButtonComponent",
     "path": "src/app/components/mui-button/mui-button.component.ts",
     "rawInfo": {
-      "value": "import { CommonModule } from '@angular/common';\nimport { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\n@Component({\n  selector: 'mui-button',\n  templateUrl: './mui-button.component.html',\n  standalone: true,\n  imports: [MatButtonModule, MatIconModule, CommonModule],\n  styleUrls: ['./mui-button.component.css'],\n})\nexport class MuiButtonComponent {\n  // Input properties for button configuration\n  @Input() type:\n    | 'basic'\n    | 'raised'\n    | 'stroked'\n    | 'flat'\n    | 'icon'\n    | 'fab'\n    | 'extended' = 'basic';\n  @Input() label: string = 'label';\n  @Input() iconName: string = ''; // For icon buttons\n  @Input() iconPosition: 'none' | 'left' | 'right' = 'none';\n  @Input() disabled: boolean = false; // Disable the button\n  @Input() ariaLabel: string = ''; // ARIA label for accessibility\n  @Input() extended: boolean = false; // Whether the button is extended (only for fab)\n  @Input() className: string = '';\n  // Output event emitter for button clicks\n  @Output() click: EventEmitter<void> = new EventEmitter<void>();\n\n  // Method to handle button clicks\n  onClick(event: Event): void {\n    event.preventDefault(); // Prevent default behavior if necessary (e.g., for links)\n    this.click.emit();\n  }\n}\n"
+      "value": "import { CommonModule } from '@angular/common';\nimport { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatIconModule } from '@angular/material/icon';\n\n@Component({\n  selector: 'mui-button',\n  templateUrl: './mui-button.component.html',\n  standalone: true,\n  imports: [MatButtonModule, MatIconModule, CommonModule],\n  styleUrls: ['./mui-button.component.css'],\n})\nexport class MuiButtonComponent {\n  // Input properties for button configuration\n  @Input() type:\n    | 'basic'\n    | 'raised'\n    | 'stroked'\n    | 'flat'\n    | 'icon'\n    | 'fab'\n    | 'extended' = 'basic';\n  @Input() label: string = 'label';\n  @Input() iconName: string = ''; // For icon buttons\n  @Input() iconPosition: 'none' | 'left' | 'right' = 'none';\n  @Input() disabled: boolean = false; // Disable the button\n  @Input() ariaLabel: string = ''; // ARIA label for accessibility\n  @Input() className: string = '';\n  // Output event emitter for button clicks\n  @Output() click: EventEmitter<void> = new EventEmitter<void>();\n\n  // Method to handle button clicks\n  onClick(event: Event): void {\n    event.preventDefault(); // Prevent default behavior if necessary (e.g., for links)\n    this.click.emit();\n  }\n}\n"
     },
     "props": [
       {
@@ -139,26 +139,6 @@
         "keys": []
       },
       {
-        "name": "extended",
-        "propType": 1,
-        "defaultValue": {
-          "value": false
-        },
-        "attr": "",
-        "dataType": "boolean",
-        "styleName": "",
-        "previewValue": {
-          "value": false
-        },
-        "actionName": "",
-        "condition": "",
-        "clientId": "",
-        "isOptional": true,
-        "expectValues": null,
-        "raw": " // ARIA label for accessibility\n  @Input() extended: boolean = false;",
-        "keys": []
-      },
-      {
         "name": "className",
         "propType": 1,
         "defaultValue": {
@@ -175,27 +155,7 @@
         "clientId": "",
         "isOptional": true,
         "expectValues": null,
-        "raw": " // Whether the button is extended (only for fab)\n  @Input() className: string = '';",
-        "keys": []
-      },
-      {
-        "name": "click",
-        "propType": 1,
-        "defaultValue": {
-          "value": "new EventEmitter<void>()"
-        },
-        "attr": "",
-        "dataType": "string",
-        "styleName": "",
-        "previewValue": {
-          "value": "new EventEmitter<void>()"
-        },
-        "actionName": "",
-        "condition": "",
-        "clientId": "",
-        "isOptional": true,
-        "expectValues": null,
-        "raw": "\n  // Output event emitter for button clicks\n  @Output() click: EventEmitter<void> = new EventEmitter<void>();",
+        "raw": " // ARIA label for accessibility\n  @Input() className: string = '';",
         "keys": []
       }
     ],
@@ -206,241 +166,27 @@
       "cssStyling": ""
     },
     "ngSelector": "mui-button",
+    "selectorId": "66bf68f490efaf86dc002ecc",
+    "wrapperSelector": "app-wrapper-66bf68f490efaf86dc002ecc",
     "previewItems": [
       {
-        "url": "https://d3beo87skfz9b9.cloudfront.net/66bafb128a3774a429eae195/polyfills-1723619250868.js",
+        "url": "https://d3beo87skfz9b9.cloudfront.net/66bf68f490efaf86dc002ecc/polyfills-1723887581514.js",
         "type": 2
       },
       {
-        "url": "https://d3beo87skfz9b9.cloudfront.net/66bafb128a3774a429eae195/main-1723619250868.js",
+        "url": "https://d3beo87skfz9b9.cloudfront.net/66bf68f490efaf86dc002ecc/main-1723887581514.js",
         "type": 2
       },
       {
-        "url": "https://d3beo87skfz9b9.cloudfront.net/66bafb128a3774a429eae195/styles-1723619250868.css",
+        "url": "https://d3beo87skfz9b9.cloudfront.net/66bf68f490efaf86dc002ecc/styles-1723887581514.css",
         "type": 3
       },
       {
-        "url": "https://d3beo87skfz9b9.cloudfront.net/66bafb128a3774a429eae195/styles-1723619250868.css",
-        "type": 3
-      }
-    ]
-  },
-  {
-    "name": "MuiInputComponent",
-    "path": "src/app/components/mui-input/mui-input.component.ts",
-    "rawInfo": {
-      "value": "import { Component, EventEmitter, Input, Output } from '@angular/core';\nimport { MatInputModule } from '@angular/material/input';\nimport { MatFormFieldModule } from '@angular/material/form-field';\nimport { MatIconModule } from '@angular/material/icon';\nimport { CommonModule } from '@angular/common';\n\n@Component({\n  selector: 'mui-input',\n  standalone: true,\n  imports: [MatFormFieldModule, MatInputModule, MatIconModule, CommonModule],\n  templateUrl: './mui-input.component.html',\n  styleUrls: ['./mui-input.component.css'],\n})\nexport class MuiInputComponent {\n  // Input properties for label, placeholder, value, and full-width option\n  @Input() label: string = 'label';\n  @Input() placeholder: string = 'placeholder';\n  @Input() value: string = '';\n  @Input() fullWidth: boolean = true;\n  @Input() className: string = '';\n  @Input() leftIcon: string | null = null; // Left icon name\n  @Input() rightIcon: string | null = null; // Right icon\n  @Input() hintText: string = '';\n\n  // Output event emitter to notify parent of value changes\n  @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();\n\n  // Method to handle changes in input value\n  onInputChange(event: Event): void {\n    const inputElement = event.target as HTMLInputElement;\n    this.valueChange.emit(inputElement.value);\n  }\n}\n"
-    },
-    "props": [
-      {
-        "name": "label",
-        "propType": 1,
-        "defaultValue": {
-          "value": "label"
-        },
-        "attr": "",
-        "dataType": "string",
-        "styleName": "",
-        "previewValue": {
-          "value": "label"
-        },
-        "actionName": "",
-        "condition": "",
-        "clientId": "",
-        "isOptional": true,
-        "expectValues": null,
-        "raw": "\n  // Input properties for label, placeholder, value, and full-width option\n  @Input() label: string = 'label';",
-        "keys": []
-      },
-      {
-        "name": "placeholder",
-        "propType": 1,
-        "defaultValue": {
-          "value": "placeholder"
-        },
-        "attr": "",
-        "dataType": "string",
-        "styleName": "",
-        "previewValue": {
-          "value": "placeholder"
-        },
-        "actionName": "",
-        "condition": "",
-        "clientId": "",
-        "isOptional": true,
-        "expectValues": null,
-        "raw": "\n  @Input() placeholder: string = 'placeholder';",
-        "keys": []
-      },
-      {
-        "name": "value",
-        "propType": 1,
-        "defaultValue": {
-          "value": ""
-        },
-        "attr": "",
-        "dataType": "string",
-        "styleName": "",
-        "previewValue": {
-          "value": ""
-        },
-        "actionName": "",
-        "condition": "",
-        "clientId": "",
-        "isOptional": true,
-        "expectValues": null,
-        "raw": "\n  @Input() value: string = '';",
-        "keys": []
-      },
-      {
-        "name": "fullWidth",
-        "propType": 1,
-        "defaultValue": {
-          "value": true
-        },
-        "attr": "",
-        "dataType": "boolean",
-        "styleName": "",
-        "previewValue": {
-          "value": true
-        },
-        "actionName": "",
-        "condition": "",
-        "clientId": "",
-        "isOptional": true,
-        "expectValues": null,
-        "raw": "\n  @Input() fullWidth: boolean = true;",
-        "keys": []
-      },
-      {
-        "name": "className",
-        "propType": 1,
-        "defaultValue": {
-          "value": ""
-        },
-        "attr": "",
-        "dataType": "string",
-        "styleName": "",
-        "previewValue": {
-          "value": ""
-        },
-        "actionName": "",
-        "condition": "",
-        "clientId": "",
-        "isOptional": true,
-        "expectValues": null,
-        "raw": "\n  @Input() className: string = '';",
-        "keys": []
-      },
-      {
-        "name": "leftIcon",
-        "propType": 1,
-        "defaultValue": {
-          "value": "null"
-        },
-        "attr": "",
-        "dataType": "union",
-        "styleName": "",
-        "previewValue": {
-          "value": "null"
-        },
-        "actionName": "",
-        "condition": "",
-        "clientId": "",
-        "isOptional": true,
-        "expectValues": [
-          "string",
-          "null"
-        ],
-        "raw": "\n  @Input() leftIcon: string | null = null;",
-        "keys": []
-      },
-      {
-        "name": "rightIcon",
-        "propType": 1,
-        "defaultValue": {
-          "value": "null"
-        },
-        "attr": "",
-        "dataType": "union",
-        "styleName": "",
-        "previewValue": {
-          "value": "null"
-        },
-        "actionName": "",
-        "condition": "",
-        "clientId": "",
-        "isOptional": true,
-        "expectValues": [
-          "string",
-          "null"
-        ],
-        "raw": " // Left icon name\n  @Input() rightIcon: string | null = null;",
-        "keys": []
-      },
-      {
-        "name": "hintText",
-        "propType": 1,
-        "defaultValue": {
-          "value": ""
-        },
-        "attr": "",
-        "dataType": "string",
-        "styleName": "",
-        "previewValue": {
-          "value": ""
-        },
-        "actionName": "",
-        "condition": "",
-        "clientId": "",
-        "isOptional": true,
-        "expectValues": null,
-        "raw": " // Right icon\n  @Input() hintText: string = '';",
-        "keys": []
-      },
-      {
-        "name": "valueChange",
-        "propType": 1,
-        "defaultValue": {
-          "value": "new EventEmitter<string>()"
-        },
-        "attr": "",
-        "dataType": "string",
-        "styleName": "",
-        "previewValue": {
-          "value": "new EventEmitter<string>()"
-        },
-        "actionName": "",
-        "condition": "",
-        "clientId": "",
-        "isOptional": true,
-        "expectValues": null,
-        "raw": "\n\n  // Output event emitter to notify parent of value changes\n  @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();",
-        "keys": []
-      }
-    ],
-    "import": [],
-    "lib": [],
-    "codeSettings": {
-      "typescript": true,
-      "cssStyling": ""
-    },
-    "ngSelector": "mui-input",
-    "previewItems": [
-      {
-        "url": "https://d3beo87skfz9b9.cloudfront.net/66bafb128a3774a429eae195/polyfills-1723619250868.js",
-        "type": 2
-      },
-      {
-        "url": "https://d3beo87skfz9b9.cloudfront.net/66bafb128a3774a429eae195/main-1723619250868.js",
-        "type": 2
-      },
-      {
-        "url": "https://d3beo87skfz9b9.cloudfront.net/66bafb128a3774a429eae195/styles-1723619250868.css",
+        "url": "https://d3beo87skfz9b9.cloudfront.net/66bf68f490efaf86dc002ecc/styles-1723887581514.css",
         "type": 3
       },
       {
-        "url": "https://d3beo87skfz9b9.cloudfront.net/66bafb128a3774a429eae195/styles-1723619250868.css",
+        "url": "https://cdn.jsdelivr.net/npm/material-icons@1.13.12/iconfont/material-icons.min.css",
         "type": 3
       }
     ]

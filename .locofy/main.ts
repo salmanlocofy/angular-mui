@@ -12,11 +12,13 @@
     import { createCustomElement } from '@angular/elements';
     import { BrowserModule, createApplication } from '@angular/platform-browser';
     import { CommonModule } from '@angular/common';
-    import { MuiButtonComponent } from '../src/app/components/mui-button/mui-button.component';;
-import { MuiInputComponent } from '../src/app/components/mui-input/mui-input.component';
+    import { AppWrapperComponent } from '../src/app/app-wrapper/app-wrapper.component';;
+import { MuiButtonComponent } from '../src/app/components/mui-button/mui-button.component';
 
     @NgModule({
       imports: [BrowserModule, CommonModule],
+      declarations: [],
+      exports: [], 
       providers: [],
       bootstrap: [],
     })
@@ -24,11 +26,11 @@ import { MuiInputComponent } from '../src/app/components/mui-input/mui-input.com
 
     
   @Component({
-    selector: 'locofy-app-inner-wrapper',
+    selector: 'locofy-app-inner-wrapper-66bf68f490efaf86dc002ecc',
     template: '<ng-content></ng-content>',
   })
-  export class LocofyAppWrapper implements AfterViewInit, AfterViewChecked {
-    @Input() cdnUrl: string = 'https://d3beo87skfz9b9.cloudfront.net/66bafb128a3774a429eae195';
+  export class LocofyAppWrapper66bf68f490efaf86dc002ecc implements AfterViewInit, AfterViewChecked {
+    @Input() cdnUrl: string = 'https://d3beo87skfz9b9.cloudfront.net/66bf68f490efaf86dc002ecc';
 
     constructor(private elementRef: ElementRef) {}
 
@@ -64,7 +66,7 @@ import { MuiInputComponent } from '../src/app/components/mui-input/mui-input.com
           return;
         }
 
-        const locofySrc = "https://d3beo87skfz9b9.cloudfront.net/66bafb128a3774a429eae195" + (src.startsWith('/') ? src : '/' + src);
+        const locofySrc = "https://d3beo87skfz9b9.cloudfront.net/66bf68f490efaf86dc002ecc" + (src.startsWith('/') ? src : '/' + src);
         if (this.fetching.includes(locofySrc)) return;
 
         this.fetching.push(locofySrc);
@@ -87,28 +89,28 @@ import { MuiInputComponent } from '../src/app/components/mui-input/mui-input.com
         providers: [
           importProvidersFrom(LocofyAppModule),
           provideRouter([
-            { path: '', component: MuiButtonComponent, pathMatch: 'full' }, { path: '', component: MuiInputComponent, pathMatch: 'full' }
+            { path: '', component: AppWrapperComponent, pathMatch: 'full' }, { path: '', component: MuiButtonComponent, pathMatch: 'full' }
           ]),
         ],
       });
 
       
+      const eleAppWrapperComponent = createCustomElement(AppWrapperComponent, {
+        injector: app.injector,
+      });
+      customElements.define("app-wrapper-66bf68f490efaf86dc002ecc", eleAppWrapperComponent);
+    
+
       const ele0 = createCustomElement(MuiButtonComponent, {
         injector: app.injector,
       });
-      customElements.define("locofy-mui-button", ele0);
+      customElements.define("mui-button-66bf68f490efaf86dc002ecc", ele0);
     
 
-      const ele1 = createCustomElement(MuiInputComponent, {
+      const LocofyAppWrapper = createCustomElement(LocofyAppWrapper66bf68f490efaf86dc002ecc, {
         injector: app.injector,
       });
-      customElements.define("locofy-mui-input", ele1);
-    
-
-      const locofyAppWrapper = createCustomElement(LocofyAppWrapper, {
-        injector: app.injector,
-      });
-      customElements.define("locofy-app-wrapper", locofyAppWrapper);
+      customElements.define("locofy-image-wrapper-66bf68f490efaf86dc002ecc", LocofyAppWrapper);
     
     }
 
