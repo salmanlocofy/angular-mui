@@ -1,7 +1,10 @@
 <!-- Basic Button -->
 <section *ngIf="type === 'basic'">
     <div [ngClass]="className" class="example-button-row" [ngStyle]="fullWidth ? {'width': '100%'} : {'width': 'auto'}">
-        <button [ngStyle]="iconPosition === 'right' ? {'flex-direction': 'row-reverse'} : {'flex-direction': 'row'}"
+        <button [ngStyle]="{
+            'flex-direction': iconPosition === 'right' ? 'row-reverse' : 'row',
+            'width': fullWidth ? '100%' : 'auto'
+          }"
             mat-button [disabled]="disabled">
             <mat-icon
                 [ngStyle]="iconPosition === 'right' ? {'margin': '0px -8px 0px 8px'} : {'margin': '0px 8px 0px -8px'}"
@@ -13,7 +16,10 @@
 <!-- Raised Button -->
 <section *ngIf="type === 'raised'" [ngStyle]="fullWidth ? {'width': '100%'} : {'width': 'auto'}">
     <div [ngClass]="className" class="example-button-row">
-        <button [ngStyle]="iconPosition === 'right' ? {'flex-direction': 'row-reverse'} : {'flex-direction': 'row'}" 
+        <button [ngStyle]="{
+            'flex-direction': iconPosition === 'right' ? 'row-reverse' : 'row',
+            'width': fullWidth ? '100%' : 'auto'
+          }"
             mat-raised-button [disabled]="disabled">
             <mat-icon
                 [ngStyle]="iconPosition === 'right' ? {'margin': '0px -8px 0px 8px'} : {'margin': '0px 8px 0px -8px'}"
@@ -25,7 +31,10 @@
 <!-- Stroked Button -->
 <section *ngIf="type === 'stroked'" [ngStyle]="fullWidth ? {'width': '100%'} : {'width': 'auto'}">
     <div [ngClass]="className" class="example-button-row">
-        <button [ngStyle]="iconPosition === 'right' ? {'flex-direction': 'row-reverse'} : {'flex-direction': 'row'}"
+        <button [ngStyle]="{
+            'flex-direction': iconPosition === 'right' ? 'row-reverse' : 'row',
+            'width': fullWidth ? '100%' : 'auto'
+          }"
             mat-stroked-button [disabled]="disabled">
             <mat-icon
                 [ngStyle]="iconPosition === 'right' ? {'margin': '0px -8px 0px 8px'} : {'margin': '0px 8px 0px -8px'}"
@@ -37,7 +46,10 @@
 <!-- Flat Button -->
 <section *ngIf="type === 'flat'" [ngStyle]="fullWidth ? {'width': '100%'} : {'width': 'auto'}">
     <div [ngClass]="className" class="example-button-row">
-        <button [ngStyle]="iconPosition === 'right' ? {'flex-direction': 'row-reverse'} : {'flex-direction': 'row'}" style="width: auto;"
+        <button [ngStyle]="{
+            'flex-direction': iconPosition === 'right' ? 'row-reverse' : 'row',
+            'width': fullWidth ? '100%' : 'auto'
+          }"
             mat-flat-button [disabled]="disabled">
             <mat-icon
                 [ngStyle]="iconPosition === 'right' ? {'margin': '0px -8px 0px 8px'} : {'margin': '0px 8px 0px -8px'}"
@@ -76,7 +88,10 @@
         <div class="example-flex-container">
             <div class="example-button-container">
                 <button
-                    [ngStyle]="iconPosition === 'right' ? {'flex-direction': 'row-reverse'} : {'flex-direction': 'row'}"
+                [ngStyle]="{
+                    'flex-direction': iconPosition === 'right' ? 'row-reverse' : 'row',
+                    'width': fullWidth ? '100%' : 'auto'
+                  }"
                     [ngClass]="className" mat-fab extended [disabled]="disabled">
                     <mat-icon
                         [ngStyle]="iconPosition === 'right' ? {'margin': '0px -8px 0px 8px'} : {'margin': '0px 8px 0px -8px'}"
