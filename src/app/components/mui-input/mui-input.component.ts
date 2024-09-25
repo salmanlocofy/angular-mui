@@ -22,8 +22,8 @@ export class MuiInputComponent {
   @Input() disabled: boolean = false;
   @Input() className: string = '';
   @Input() appearance: 'outline' | 'fill' = 'fill';
-  @Input() leftIcon: string | null = null; // Left icon name
-  @Input() rightIcon: string | null = null; // Right icon
+  @Input() leftIcon: string = ''; // Left icon name
+  @Input() rightIcon: string = ''; // Right icon
   @Input() hintText: string = '';
 
   // Output event emitter to notify parent of value changes
