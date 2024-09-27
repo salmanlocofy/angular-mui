@@ -15,7 +15,7 @@ export class MuiTextareaComponent {
   @Input() appearance: 'outline' | 'fill' = 'fill';
   @Input() disabled: boolean = false;
   @Input() placeholder: string = 'placeholder';
-  @Input() value: string | null = null;
+  @Input() value: string = '';
   @Input() fullWidth: boolean = true;
   @Input() rows: number = 3;
   @Input() cols: number = 20;
