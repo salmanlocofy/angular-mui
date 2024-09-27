@@ -55,6 +55,11 @@ export class MuiAutocompleteComponent {
   @ViewChild('input') input!: ElementRef<HTMLInputElement>;
   control = new FormControl();
   ngOnInit() {
+    if (this.disabled) {
+      this.control.disable();
+    } else {
+      this.control.enable();
+    }
     this.filteredOptions$ = this.control.valueChanges.pipe(
       startWith(''),
       map((value) => this.filterFn(this.options, value))
