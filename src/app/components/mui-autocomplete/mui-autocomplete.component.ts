@@ -44,7 +44,7 @@ export class MuiAutocompleteComponent {
     filterValue: string
   ) => { value: any; label: string }[] = (options, filterValue) =>
     options.filter((option) =>
-      option.label.toLowerCase().includes(filterValue?.toLowerCase())
+      option.label?.toLowerCase().includes(filterValue?.toLowerCase())
     );
 
   // Output event emitter for value changes
