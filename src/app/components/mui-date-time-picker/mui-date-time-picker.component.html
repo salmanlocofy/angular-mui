@@ -1,7 +1,7 @@
 <mat-form-field [appearance]="appearance">
     <mat-label>{{ placeholder }}</mat-label>
-    <input matInput [matDatepicker]="picker" [value]="value" (dateChange)="onDateChange($event)"
-        [disabled]="disabled" />
+    <input matInput [matDatepicker]="picker" [value]="value" [disabled]="disabled"
+        (dateChange)="onDateChange($event)" />
     <mat-datepicker-toggle matSuffix [for]="picker" *ngIf="!disabled">
     </mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
