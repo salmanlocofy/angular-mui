@@ -1,8 +1,8 @@
 <mat-form-field [ngClass]="className" [appearance]="appearance">
     <mat-label>{{ label }}</mat-label>
-    <mat-icon matPrefix *ngIf="leftIcon">{{ leftIcon }}</mat-icon>
+    <mat-icon matPrefix *ngIf="showLeftIcon">{{ leftIcon }}</mat-icon>
     <input [disabled]="disabled" matInput [placeholder]="placeholder" [value]="value || ''"
         (input)="onInputChange($event)">
-    <mat-icon matSuffix *ngIf="rightIcon">{{ rightIcon }}</mat-icon>
-    <mat-hint>{{hintText}}</mat-hint>
+    <mat-icon matSuffix *ngIf="showRightIcon">{{ rightIcon }}</mat-icon>
+    <mat-hint *ngIf="showHintText">{{hintText}}</mat-hint>
 </mat-form-field>

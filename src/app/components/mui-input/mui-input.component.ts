@@ -24,7 +24,10 @@ export class MuiInputComponent {
   @Input() appearance: 'outline' | 'fill' = 'fill';
   @Input() leftIcon: string = ''; // Left icon name
   @Input() rightIcon: string = ''; // Right icon
+  @Input() showRightIcon: boolean = false;
+  @Input() showLeftIcon: boolean = false;
   @Input() hintText: string = '';
+  @Input() showHintText: boolean = false;
 
   // Output event emitter to notify parent of value changes
   @Output() valueChange: EventEmitter<string> = new EventEmitter<string>();
