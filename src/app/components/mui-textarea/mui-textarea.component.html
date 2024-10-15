@@ -1,5 +1,5 @@
 <mat-form-field [class]="className" [appearance]="appearance" [class.example-full-width]="fullWidth">
-    <mat-label>{{ label }}</mat-label>
+    <mat-label *ngIf="showLabel">{{ label }}</mat-label>
     <textarea [disabled]="disabled" matInput [placeholder]="placeholder" [value]="value || ''" [rows]="rows"
         [cols]="cols" (input)="onTextareaChange($event)">
     </textarea>

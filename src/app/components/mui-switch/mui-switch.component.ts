@@ -11,6 +11,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 export class MuiSwitchComponent {
   // Input properties for the switch
   @Input() label: string = '';
+  @Input() showLabel: boolean = false;
   @Input() className: string = '';
   @Input() checked: boolean = false;
   @Input() disabled: boolean = false;

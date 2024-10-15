@@ -1,6 +1,6 @@
 <mat-radio-group [class]="className">
     <mat-radio-button [value]="value" [checked]="checked" [disabled]="disabled" [name]="name"
         (change)="onRadioChange($event)">
-        {{ label }}
+        {{showLabel ? label : ''}}
     </mat-radio-button>
 </mat-radio-group>

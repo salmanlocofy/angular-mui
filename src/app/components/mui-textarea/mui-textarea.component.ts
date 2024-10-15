@@ -1,17 +1,19 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'mui-textarea',
   templateUrl: './mui-textarea.component.html',
   standalone: true,
-  imports: [MatFormFieldModule, MatInputModule],
+  imports: [MatFormFieldModule, MatInputModule, CommonModule],
   styleUrls: ['./mui-textarea.component.css'],
 })
 export class MuiTextareaComponent {
   // Input properties for label, placeholder, value, and full-width option
   @Input() label: string = 'label';
+  @Input() showLabel: boolean = false;
   @Input() appearance: 'outline' | 'fill' = 'fill';
   @Input() disabled: boolean = false;
   @Input() placeholder: string = 'placeholder';

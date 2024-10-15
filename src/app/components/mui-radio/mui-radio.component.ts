@@ -10,7 +10,8 @@ import { MatRadioModule } from '@angular/material/radio';
 })
 export class MuiRadioComponent {
   // Input properties for label, value, checked state, and disabled state
-  @Input() label: string = '';
+  @Input() label: string = 'label';
+  @Input() showLabel: boolean = false;
   @Input() value: any;
   @Input() checked: boolean = false;
   @Input() disabled: boolean = false;

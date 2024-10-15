@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common';
 export class MuiInputComponent {
   // Input properties for label, placeholder, value, and full-width option
   @Input() label: string = 'label';
+  @Input() showLabel: boolean = false;
   @Input() placeholder: string = 'placeholder';
   @Input() value: string = '';
   @Input() disabled: boolean = false;

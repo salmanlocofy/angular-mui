@@ -1,5 +1,5 @@
 <mat-form-field [ngClass]="className" [appearance]="appearance">
-    <mat-label>{{ label }}</mat-label>
+    <mat-label *ngIf="showLabel">{{ label }}</mat-label>
     <mat-icon matPrefix *ngIf="showLeftIcon">{{ leftIcon }}</mat-icon>
     <input [disabled]="disabled" matInput [placeholder]="placeholder" [value]="value || ''"
         (input)="onInputChange($event)">
